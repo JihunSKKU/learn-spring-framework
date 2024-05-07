@@ -1,9 +1,19 @@
 package com.in28minutes.springboot.learnjpaandhibernate.course;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class Course {
 
+	@Id
 	private long id;
+
+//	@Column(name = "name") -> Entity와 이름이 같기에 굳이 넣지 않아도 되는 라인
 	private String name;
+
+//	@Column(name = "author")
 	private String author;
 
 	public Course() {
