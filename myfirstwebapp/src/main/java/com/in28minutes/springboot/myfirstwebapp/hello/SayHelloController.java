@@ -8,8 +8,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class SayHelloController {
 
 	// "say-hello" => "Hello! What are you learning today?"
-	
-	//say-hello
 	// http://localhost:8080/say-hello
 	@RequestMapping("say-hello")
 	@ResponseBody
@@ -31,6 +29,16 @@ public class SayHelloController {
 		sb.append("</html>");
 		
 		return sb.toString();
+	}
+	
+	// "say-hello-jsp" => sayHello.jsp 
+	// /src/main/resources/META-INF/resources/WEB-INF/jsp/sayHello.jsp
+	// /src/main/resources/META-INF/resources/WEB-INF/jsp/welcome.jsp
+	// /src/main/resources/META-INF/resources/WEB-INF/jsp/login.jsp
+	// /src/main/resources/META-INF/resources/WEB-INF/jsp/todos.jsp
+	@RequestMapping("say-hello-jsp")
+	public String sayHelloJsp() {
+		return "sayHello";
 	}
 	
 }
