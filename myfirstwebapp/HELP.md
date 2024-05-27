@@ -41,3 +41,5 @@ B3: Identifies correct View
 /WEB-INF/jsp/login.jsp
 
 B4: Executes view
+
+## Request vs Model vs Session
